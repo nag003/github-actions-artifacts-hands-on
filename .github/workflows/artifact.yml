@@ -20,7 +20,7 @@ jobs:
         path: ./artifacts/hello.txt
 
     - name: Download text file
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@latest
       with:
         name: hello-artifact
         
