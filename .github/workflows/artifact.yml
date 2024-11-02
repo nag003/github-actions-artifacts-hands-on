@@ -17,12 +17,13 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: hello-artifact
-        path: ./artifacts/hello.txt
+        path: hello.txt
 
     - name: Download text file
-      uses: actions/download-artifact@latest
+      uses: actions/download-artifact@v4
       with:
         name: hello-artifact
+        path: ./artifacts
         
     - name: Display content of the text file
       run: cat ./artifacts/hello.txt
